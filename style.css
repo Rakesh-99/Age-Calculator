@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: black;
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    flex-direction: column;
+    border: 1px solid transparent;
+    
+    height: 70vh;
+    background-image: linear-gradient(rgba(255, 192, 203, 0.647), rgb(255, 182, 194));
+    border-radius: 5px;
+}
+input{
+    margin: 30px 0;
+    padding: 10px 3px;
+    width: 20rem;
+}
+select{
+    padding: 10px 3px;
+    width: 20.5rem;
+}
+button{
+    padding: 10px 3px;
+    width: 10rem;
+    cursor: pointer;
+    
+}
+#btnContainer{
+    text-align: center;
+}
+
+
+
+/* code for responsive  */
+
+
+@media(max-width: 770px){
+    input{
+        width: 15rem;
+
+    }
+    select{
+        width: 15.5rem;
+
+    }
+    h1{
+        font-size: 20px;
+    }
+    .formContainer{
+        height: 50vh;
+    }
+}
+
+@media(max-width: 550px){
+    input{
+        width: 10rem;
+        padding: 4px 2px;
+
+    }
+    select{
+        width: 10.5rem;
+        padding: 4px 0;
+
+
+    }
+    button{
+        width: 7rem;
+        padding: 4px 0;
+    }
+    .formContainer{
+        height: 45vh;
+    }
+}
+@media(max-width: 350px){
+    input{
+        width: 7rem;
+        padding: 2px 1px;
+
+    }
+     select{
+        width: 7.5rem;
+        padding: 2px 1px;
+
+
+    }
+    button{
+        width: 4rem;
+        padding: 2px 0;
+    }
+    h1{
+        font-size: 15px;
+    }
+    .formContainer{
+        height: 40vh;
+    }
+}
