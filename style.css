@@ -1,119 +1,128 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     height: 100vh;
-    box-sizing: border-box;
-    background-color: black;
+    width: 100vw;
+
 }
-h1{
-    color: aliceblue;
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
+
 .formContainer{
+    border: none;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50vw;
     flex-direction: column;
-    border: 1px solid transparent;
-    
-    height: 70vh;
-    background-image: linear-gradient(rgba(255, 192, 203, 0.647), rgb(255, 182, 194));
-    border-radius: 5px;
+    background-image: linear-gradient(rgb(117, 117, 252), rgb(230, 192, 255));
+    /* border-radius: 10px; */
 }
 input{
-    margin: 30px 0;
-    padding: 10px 3px;
-    width: 20rem;
-    background-color: rgb(255, 255, 255);
+    margin: 10px 0;
+    padding: 15px 5px;
+    border-radius: 7px;
+    width: 30rem;
+    background-color: rgba(12, 42, 75, 0.779);
+    border: 2px solid transparent;
+    color: aliceblue;
+    
 }
-select{
-    padding: 10px 3px;
-    width: 20.5rem;
-    background-color: rgb(255, 255, 255);
+::placeholder{
+    color: white;
+    font-size: 15px;
+
+}
+h2{
+    text-align: center;
+    margin: 10px 0;
+    color: rgb(240, 242, 255);
+}
+#btnContainer{
+text-align: center;
 
 }
 button{
-    padding: 10px 3px;
-    width: 10rem;
+    width: 20rem;
+    padding: 15px 50px;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    border-radius: 50px;
+    border: none;
+    font-weight: 500;
+    margin-top: 20px;
+}
+button:hover{
+    background-color: rgb(60, 60, 60);
     cursor: pointer;
-    background-color: rgb(255, 255, 255);
 
-    
 }
-#btnContainer{
-    text-align: center;
+h4{
+    margin-top: 20px;
+    font-family:monospace;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 
 
-/* code for responsive  */
+
+/*  Responive  */
 
 
-@media(max-width: 770px){
-    input{
-        width: 15rem;
+
+@media(max-width : 890px ){
+    .formContainer{
+        height: 100vh;
+        width: 100vw;
 
     }
-    select{
-        width: 15.5rem;
+}
 
-    }
-    h1{
+@media(max-width : 760px ){
+    h2{
         font-size: 20px;
     }
+    input{
+        width: 20rem;
+    }
     .formContainer{
-        height: 50vh;
+        height:100vh;
+        width: 100vw;
     }
 }
 
-@media(max-width: 550px){
+@media(max-width: 560px){
     input{
+        width: 20rem;
+    }
+     .formContainer{
+        height: 100vh;
+        width: 100vw;
+     }
+}
+@media(max-width: 370px){
+    input{
+        width: 20rem;
+    }
+     .formContainer{
+        height: 100vh;
+        width: 100vw;
+     }
+}
+@media(max-width: 338px){
+    input{
+        width: 15rem;
+        padding: 10px 10px;
+    }
+    button{
         width: 10rem;
-        padding: 4px 2px;
-
+        padding: 10px 10px;
     }
-    select{
-        width: 10.5rem;
-        padding: 4px 0;
-
-
-    }
-    button{
-        width: 7rem;
-        padding: 4px 0;
-    }
-    .formContainer{
-        height: 45vh;
-    }
-}
-@media(max-width: 350px){
-    input{
-        width: 7rem;
-        padding: 2px 1px;
-
-    }
-     select{
-        width: 7.5rem;
-        padding: 2px 1px;
-
-
-    }
-    button{
-        width: 4rem;
-        padding: 2px 0;
-    }
-    h1{
-        font-size: 15px;
-    }
-    .formContainer{
-        height: 40vh;
-    }
+    
 }

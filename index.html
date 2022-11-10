@@ -11,26 +11,14 @@
     
     <div class="formContainer">
         <form action="">
-            <h1>Age Calculator</h1>
+            <h2>Calculate your age </h2>
             <input type="number" placeholder="Date" id="date"><br>
-            <select name="" id="month">
-                <option value="" selected disabled>Month</option>
-                <option value="january">Jan</option>
-                <option value="february">Feb</option>
-                <option value="march">Mar</option>
-                <option value="april">Apr</option>
-                <option value="may">May</option>
-                <option value="june">Jun</option>
-                <option value="july">Jul</option>
-                <option value="august">Aug</option>
-                <option value="september">Sep</option>
-                <option value="october">Oct</option>
-                <option value="november">Nov</option>
-                <option value="december">Dec</option>
-            </select><br>
-            <input type="number" placeholder="Date of birth" id="year" ><br>
-                <div id="btnContainer">
-            <button onclick="calculate()">Calculate</button>
+            <input type="number" placeholder="Month" id="month" ><br>
+            <input type="number" placeholder="Year" id="year" ><br>
+            <div id="btnContainer">
+
+            <button onclick="calculate()" id="btn">Calculate</button>
+            <h4 id="show"></p>
             </div>
         </form>
     </div>

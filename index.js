@@ -1,33 +1,69 @@
 
 
+ 
+    let btn = document.getElementById("btn");
 
-let calculate = () => {
-    
-    let date = document.getElementById("date").value;
-    let month = document.getElementById("month").value;
-    let year = document.getElementById("year").value;
 
-    // console.log(date + '/' + month + '/' + year);
 
-    if (date == 0 || date == '') {
+    btn.addEventListener('click', function (e) {
+
+        let dobDate = document.getElementById("date").value;
+        let dobMonth = document.getElementById("month").value;
+        let dobYear = document.getElementById("year").value;
+
+     // date
+
+
+    if (dobDate > 31 && dobDate > 0) {
+        alert("Invalid date entered !");
+    }
+
+
+
+    if (dobDate == 0 || dobDate == "") {
         alert("date field can not be blancked !");
         return;
     }
-    if (year == 0 || year == '') {
-        alert('year field can not be blancked !');
+    if (dobYear == 0 || dobYear == "") {
+        alert("year field can not be blancked !");
         return;
     }
+    if (dobMonth == "") {
+        alert("please select a month !");
+        return;
+    } else if (dobMonth > 12) {
+        alert("Enter a valid month !")
+    }
 
-    let userDate = new Date();
-    let dob = new Date(`${date} ${month} ${year}`);
-    console.log(dob);
+    // year-------------------------------------------------------
 
-    let diffrence = (userDate - dob);
-    console.log(diffrence);
-
-    let finalAge = Math.floor(diffrence / (1000 * 60 * 60 * 24) / 365 );  
-    console.log( finalAge);
+    let currentYear = new Date().getFullYear();
+    let yourAgeIs = currentYear - dobYear;
 
 
+    // month------------------------------------------------------
 
-}
+    if (dobMonth <= 12 && dobMonth >=0) {
+        let currentMonth = new Date().getMonth();
+        if (currentMonth >= dobMonth) {
+            let monthDifference = currentMonth - dobMonth;
+            // alert(yourAgeIs + "Years" + monthDifference + "Months");
+            document.getElementById('show').innerHTML = yourAgeIs + " " + "Years " + monthDifference + " " + "Months";
+
+        } else {
+            yourAgeIs--
+            monthDifference = 12 + currentMonth - dobMonth;
+            // alert(yourAgeIs +" " +"Years" + monthDifference+ " Months ");
+            document.getElementById('show').innerHTML = yourAgeIs + " " + "Years " + monthDifference + " " + "Months";
+
+        }
+        }
+        
+        document.getElementById("date").value = " ";
+        document.getElementById("month").value = " ";
+        document.getElementById("year").value = " ";
+
+        e.preventDefault();
+   })
+
+
